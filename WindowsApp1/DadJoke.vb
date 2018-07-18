@@ -6,7 +6,7 @@
 '////////////////////////////////
 Public Class DadJoke
 
-    Private Const myFilePath As String = "C:\Ken\dadjokes.txt"
+    Private Const myFilePath As String = "C:\Ken\temp\dadjokes.txt"
     Private Shared myJokeArray As String() = System.IO.File.ReadAllLines(myFilePath)
     Private Shared myRandomGenerator As Random = New Random()
 

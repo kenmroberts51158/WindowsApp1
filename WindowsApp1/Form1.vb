@@ -14,7 +14,7 @@ Public Class Form1
         Dim fd As OpenFileDialog = New OpenFileDialog()
 
         fd.Title = "Open File Dialog"
-        fd.InitialDirectory = "C:\Ken"
+        fd.InitialDirectory = "C:\Ken\temp"
         ''fd.Filter = "Text files (*.txt*)|*.txt*|All files (*.*)|*.*"
         fd.Filter = "Text files (*.txt*)|*.txt*"
         fd.FilterIndex = 2
