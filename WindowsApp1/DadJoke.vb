@@ -32,7 +32,7 @@ Public Class DadJoke
                 myJokeArray = IO.File.ReadAllLines(filePath)
             End If
         Catch ex As Exception
-            myJokeArray = System.IO.File.ReadAllLines(myFilePath)
+            myJokeArray = IO.File.ReadAllLines(myFilePath)
         End Try
 
     End Sub
