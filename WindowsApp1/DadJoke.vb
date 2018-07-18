@@ -6,7 +6,8 @@
 '////////////////////////////////
 Public Class DadJoke
 
-    Private Shared myJokeArray As String() = System.IO.File.ReadAllLines("C:\Ken\dadjokes.txt")
+    Private Const myFilePath As String = "C:\Ken\dadjokes.txt"
+    Private Shared myJokeArray As String() = System.IO.File.ReadAllLines(myFilePath)
     Private Shared myRandomGenerator As Random = New Random()
 
     Public Shared ReadOnly Property GetInstance As DadJoke
@@ -28,10 +29,10 @@ Public Class DadJoke
 
         Try
             If password = "fred" Then
-                myJokeArray = System.IO.File.ReadAllLines(filePath)
+                myJokeArray = IO.File.ReadAllLines(filePath)
             End If
         Catch ex As Exception
-            myJokeArray = System.IO.File.ReadAllLines("C:\Ken\dadjokes.txt")
+            myJokeArray = System.IO.File.ReadAllLines(myFilePath)
         End Try
 
     End Sub
