@@ -1,4 +1,9 @@
-﻿
+﻿'////////////////////////////////
+'
+'DadJoke (c) Kamikaze Software
+'
+'
+'////////////////////////////////
 Public Class DadJoke
 
     Private Shared myJokeArray As String() = System.IO.File.ReadAllLines("C:\Ken\dadjokes.txt")
