@@ -1,25 +1,6 @@
 ﻿Imports myIO = System.IO
 
 Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        MsgBox("hello world")
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        Dim quoteArray As String() = myIO.File.ReadAllLines("C:\Ken\dadjokes.txt")
-        RichTextBox1.Text = quoteArray(GetRandom(0, quoteArray.Count))
-
-    End Sub
-
-    Public Function GetRandom(ByVal Min As Integer, ByVal Max As Integer) As Integer
-
-        Dim myRandomGenerator As Random = New Random()
-        Return myRandomGenerator.Next(Min, Max)
-
-    End Function
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
@@ -34,7 +15,8 @@ Public Class Form1
 
         fd.Title = "Open File Dialog"
         fd.InitialDirectory = "C:\Ken"
-        fd.Filter = "Text files (*.txt*)|*.txt*|All files (*.*)|*.*"
+        ''fd.Filter = "Text files (*.txt*)|*.txt*|All files (*.*)|*.*"
+        fd.Filter = "Text files (*.txt*)|*.txt*"
         fd.FilterIndex = 2
         fd.RestoreDirectory = True
 
@@ -43,5 +25,6 @@ Public Class Form1
             myDadJoke.UpdateJokeFile(fd.FileName, "fred")
             myDadJoke = Nothing
         End If
+
     End Sub
 End Class
